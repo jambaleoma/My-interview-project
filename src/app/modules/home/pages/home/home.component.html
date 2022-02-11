@@ -1,0 +1,10 @@
+<p>
+  Benvenuto {{user.username}} !
+</p>
+<app-user-detail [usermane]="user.username" [password]="user.password"></app-user-detail>
+<h4 style="padding-top: 5em;">
+  Effettua la Log out!
+</h4>
+<div style="padding-top: 2em;">
+  <button (click)="goToLogOut()" type="button" class="btn btn-info">Logout</button>
+</div>
