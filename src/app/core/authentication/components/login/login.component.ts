@@ -18,7 +18,7 @@ export class LoginComponent {
     this.authenticationService.login(form.value).subscribe(result => {
       if (result) {
         sessionStorage.setItem('user', JSON.stringify(result));
-        this.router.navigateByUrl('myInterviewApp/home');
+        this.goToHome();
       }
     });
   }
@@ -29,6 +29,10 @@ export class LoginComponent {
 
   goToHelp() {
     this.router.navigateByUrl('/myInterviewApp/help');
+  }
+
+  goToHome() {
+    this.router.navigateByUrl('/myInterviewApp/home');
   }
 
 }

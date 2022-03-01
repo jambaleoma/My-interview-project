@@ -1,22 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { StatusService } from './core/service/status.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
+
   title = 'Interview App';
-  public serviceStatus = 'DOWN';
 
-  constructor(private statusService: StatusService) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.statusService.getStatus().subscribe(res => {
-      if (res) {
-        this.serviceStatus = res.status;
-      }
-    });
-  }
 }
