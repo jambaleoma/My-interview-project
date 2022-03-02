@@ -10,6 +10,7 @@ export class AuthenticationService {
 
   private loginUrl = '/login';
   private registerUrl = '/registerUser';
+  private resetPswUrl = '/account/password';
 
   constructor(private http: HttpClient) {}
 
@@ -22,5 +23,9 @@ export class AuthenticationService {
   register(user: User): Observable<any> {
     const body = user;
     return this.http.post(this.registerUrl, body);
+  }
+
+  resetPassword(email: string): Observable<any> {
+    return this.http.put(this.resetPswUrl + '?email=' + email, null);
   }
 }

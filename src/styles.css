@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 .backgroundNegg {
     background-image: url("./assets/img/travel-security-bg.jpg");
-  }
+}
+
+.e-toast-container .e-toast {
+  background-color: green;
+}
   

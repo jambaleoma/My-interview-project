@@ -9,6 +9,7 @@ export class UserDetailComponent implements OnInit {
 
   @Input() usermane: string;
   @Input() password: string;
+  @Input() email: string;
 
   constructor() { }
 

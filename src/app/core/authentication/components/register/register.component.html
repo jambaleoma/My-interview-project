@@ -10,8 +10,9 @@
     </div>
 
     <!-- Login Form -->
-    <form #myform = "ngForm" (ngSubmit) = "onSubmit(myform)">
+    <form #myform = "ngForm" (ngSubmit)="onSubmit(myform)">
       <input type="text" class="fadeIn second" name="username" placeholder="Username" ngModel>
+      <input type="text" class="fadeIn second" name="email" placeholder="Email" ngModel>
       <input type="text" class="fadeIn third" name="password" placeholder="Password" ngModel>
       <input type="text" class="fadeIn third" name="password2" placeholder="Conferma Password" ngModel>
       <input type="submit" class="fadeIn fourth" value="Registrami">
