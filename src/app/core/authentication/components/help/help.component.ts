@@ -30,7 +30,7 @@ export class HelpComponent {
   }
 
   goToLogin() {
-    this.router.navigateByUrl('/login');
+    this.router.navigateByUrl('myInterviewApp/login');
   }
 
   showToast(status: string) {

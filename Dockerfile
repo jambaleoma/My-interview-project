@@ -8,7 +8,6 @@ COPY ./ /usr/app/
 RUN npm cache clean --force
 RUN npm cache verify
 
-RUN npm install -g @angular/cli
 RUN npm install
 RUN npm run build --prod
 

@@ -1,3 +1,4 @@
+import { environment } from './../../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -7,6 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class StatusService {
 
+  private myAppUrl = environment.myAppUrl;
   private statusUrl = '/api/status';
   public status = 'DOWN';
 
@@ -14,7 +16,7 @@ export class StatusService {
 
   // Get the status
   getStatus(): Observable<any> {
-    return this.http.get(this.statusUrl);
+    return this.http.get(('https://' + this.myAppUrl) + this.statusUrl);
   }
 
 }
